@@ -1,0 +1,11 @@
+<h1>Welcome to Chooser</h1>
+
+<% if @user %>
+  <p>Hello <%= @user.email %>, <%= @user.id %></p>
+  <%= link_to "sign_out", destroy_user_session_path, method: "delete" %>
+<% else %>
+  <%= link_to "sign_in", new_user_session_path %>
+<% end %>
+<p>Choose a path</p>
+<p>I am a teacher</p>
+<p>I am a student</p>
